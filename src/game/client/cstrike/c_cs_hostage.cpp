@@ -211,7 +211,7 @@ C_CHostage::C_CHostage()
 
 	m_PlayerAnimState = CreateHostageAnimState( this, this, LEGANIM_8WAY, false );
 
-	m_leader = NULL;
+	m_leader.m_Value = NULL;
 	m_blinkTimer.Invalidate();
 	m_seq = -1;
 
@@ -239,7 +239,7 @@ C_CHostage::~C_CHostage()
 //-----------------------------------------------------------------------------
 void C_CHostage::Spawn( void )
 {
-	m_leader = NULL;
+	m_leader.GetForModify() = NULL;
 	m_blinkTimer.Invalidate();
 }
 

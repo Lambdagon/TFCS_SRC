@@ -158,7 +158,7 @@ void CHostage::Spawn( void )
 
 	SetUse( &CHostage::HostageUse );
 
-	m_leader = NULL;
+	m_leader.GetForModify() = NULL;
 	m_reuseTimer.Invalidate();
 	m_hasBeenUsed = false;
 
@@ -760,7 +760,8 @@ void CHostage::HostageThink( void )
 //-----------------------------------------------------------------------------------------------------
 bool CHostage::IsFollowingSomeone( void )
 {
-	return (m_leader.m_Value != NULL);
+	// If trying to read the value  
+	return (m_leader.Get() != NULL);
 }
 
 //-----------------------------------------------------------------------------------------------------
@@ -825,7 +826,9 @@ void CHostage::GiveCTUseBonus( CCSPlayer *rescuer )
  */
 void CHostage::Idle( void )
 {
-	m_leader = NULL;
+	// If we are changing the value use getformodify
+	// if we are initializing 
+	m_leader.GetForModify() = NULL;
 }
 
 //-----------------------------------------------------------------------------------------------------

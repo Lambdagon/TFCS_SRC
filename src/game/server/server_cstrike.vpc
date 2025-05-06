@@ -39,12 +39,7 @@ $Project "Server"
 		$File	"team_spawnpoint.cpp"
 		$File	"team_spawnpoint.h"
 		$File	"$SRCDIR\game\shared\teamplayroundbased_gamerules.cpp"
-		
-		$Folder "FMOD"
-		{
-			$File "fmod\sound_fmod.cpp"
-			$File "fmod\sound_fmod.h"
-		}
+
 
 		$Folder	"Counter Strike Source Community DLL"
 		{
@@ -106,17 +101,6 @@ $Project "Server"
 			$File	"cstrike\te_radioicon.cpp"
 			$File	"cstrike\te_shotgun_shot.cpp"
 			$File	"cstrike\te_shotgun_shot.h"
-
-			$File	"$SRCDIR\game\shared\cstrike\cs_urlretrieveprices.cpp"
-			{
-				$Configuration
-				{
-					$Compiler
-					{
-						$Create/UsePrecompiledHeader	"Not Using Precompiled Headers"
-					}
-				}
-			}
 
 			$File	"$SRCDIR\game\shared\cstrike\cs_urlretrieveprices.h"
 			$File	"$SRCDIR\game\shared\cstrike\weapon_ak47.cpp"
@@ -226,10 +210,5 @@ $Project "Server"
 				$File	"cstrike\hostage\cs_simple_hostage.h"
 			}
 		}
-	}
-	
-	$Folder	"Link Libraries"
-	{
-		$ImpLib		"$SRCDIR\thirdparty\fmod\lib\x64\fmod_vc" [$WIN32]
 	}
 }

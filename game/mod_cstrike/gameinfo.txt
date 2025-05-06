@@ -1,16 +1,16 @@
 "GameInfo"
 {
-	game	"Counter-Strike Source: Community Edition"
-	type multiplayer_only
+	game			"Counter-Strike Source: Community Edition"
+	type 			multiplayer_only
 	
-	GameData	"community.fgd"
+	GameData		"community.fgd"
 	InstancePath 	"maps/instances/"
 
-	nomodels 	1 
-	nohimodel 	1	
-	nocrosshair 0 
+	nomodels 		1 
+	nohimodel 		1	
+	nocrosshair 	0 
 	advcrosshair 	1
-	bots 1
+	bots 			1
 	nodegraph 0
 
 	hidden_maps
@@ -61,8 +61,8 @@
 			// VPK and we can avoid making thousands of file system calls to attempt to open files
 			// in folders where they don't exist.  (Searching a VPK is much faster than making an operating
 			// system call.)
-			game				"|all_source_engine_paths|../Counter-Strike Source/cstrike/cstrike_english.vpk"
-			game				"|all_source_engine_paths|../Counter-Strike Source/cstrike/cstrike_pak.vpk"
+			//game				"|appid_240|cstrike/cstrike_english.vpk"
+			//game				"|appid_240|cstrike/cstrike_pak.vpk"
 
 			game				|all_source_engine_paths|hl2/hl2_english.vpk
 			game				|all_source_engine_paths|hl2/hl2_pak.vpk
@@ -80,7 +80,7 @@
 			gamebin				|gameinfo_path|bin
 
 			// Last, mount in shared HL2 loose files
-			game				"|all_source_engine_paths|../Counter-Strike Source/cstrike"
+			//game				"|appid_240|cstrike"
 			game				|all_source_engine_paths|hl2
 			platform			|all_source_engine_paths|platform
 			
