@@ -1,0 +1,172 @@
+"sprites/640_hud"
+{
+	TextureFileRefs
+	{
+		"dfile"
+		{
+			"prefix"		"d_"
+		}
+		"dnegfile"
+		{
+			"prefix"		"dneg_"
+		}
+	}
+
+	TextureData
+	{
+		//Death Message icons
+		"ak47"
+		{
+			"font"		"CSTypeDeath"
+			"character"	"b"
+		}
+		"aug"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"e"
+		}
+		"awp"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"r"
+		}
+		"deagle"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"f"
+		}
+		"elite"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"s"
+		}
+		"famas"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"t"
+		}
+		"fiveseven"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"u"
+		}
+		"flashbang"
+		{
+			"font"		"CSType"
+			"character"	"g"
+		}
+		"g3sg1"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"i"
+		}
+		"galil"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"v"
+		}
+		"glock"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"c"
+		}
+		"hegrenade"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"h"
+		}
+		"knife"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"j"
+		}
+		"m249"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"z"
+		}
+		"m3"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"k"
+		}
+		"m4a1"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"w"
+		}
+		"mac10"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"l"
+		}
+		"mp5navy"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"x"
+		}
+		"p228"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"y"
+		}
+		"p90"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"m"
+		}
+		"scout"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"n"
+		}
+		"sg552"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"A"
+		}
+		"sg550"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"o"
+		}
+		"tmp"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"d"
+		}
+		"ump45"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"q"
+		}
+		"usp"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"a"
+		}
+		"xm1014"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"B"
+		}
+		"headshot"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"D"
+		}
+		"shieldgun"
+		{
+			"file"		"sprites/640hud1"
+			"x"			"64"
+			"y"			"95"
+			"width"		"39"
+			"height"	"17"
+		}
+		"skull_cs"
+		{
+			"font"		"CSTypeDeath"
+			"character"		"C"
+		}
+	}	
+}

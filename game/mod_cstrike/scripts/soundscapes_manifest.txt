@@ -1,0 +1,22 @@
+soundscapes_manifest
+{
+	"file"		"scripts/soundscapes/dust.txt"
+	"file"		"scripts/soundscapes/italy.txt"
+	"file"		"scripts/soundscapes/aztec.txt"
+	"file"		"scripts/soundscapes/dust2.txt"
+	"file"		"scripts/soundscapes/cbble.txt"
+	"file"		"scripts/soundscapes/havana.txt"
+	"file"		"scripts/soundscapes/piranesi.txt"
+	"file"		"scripts/soundscapes/chateau.txt"
+	"file"		"scripts/soundscapes/office.txt"
+	"file"		"scripts/soundscapes/prodigy.txt"
+	"file"		"scripts/soundscapes/tides.txt"
+	"file"		"scripts/soundscapes/compound.txt"
+	"file"		"scripts/soundscapes/train.txt"
+	"file"		"scripts/soundscapes/general.txt"
+	"file"		"scripts/soundscapes/inferno.txt"
+	"file"		"scripts/soundscapes/port.txt"
+	"file"		"scripts/soundscapes/assault.txt"
+	"file"		"scripts/soundscapes/nuke.txt"
+	"file"		"scripts/soundscapes/militia.txt"
+}

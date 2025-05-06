@@ -48,7 +48,8 @@ class CClientReplayImp : public IClientReplay
 public:
 	virtual uint64 GetServerSessionId()
 	{
-		return GetSteamWorksSGameStatsUploader().GetServerSessionID();
+		//return GetSteamWorksSGameStatsUploader().GetServerSessionID();
+		return null;
 	}
 	
 	virtual IReplayScreenshotSystem *GetReplayScreenshotSystem()
