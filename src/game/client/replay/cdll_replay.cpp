@@ -25,7 +25,7 @@
 #if defined( TF_CLIENT_DLL )
 #include "c_tf_gamestats.h"
 #endif
-#include "steamworks_gamestats.h"
+//#include "steamworks_gamestats.h"
 #include "replay_gamestats_shared.h"
 
 //----------------------------------------------------------------------------------------

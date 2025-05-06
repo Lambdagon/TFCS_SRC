@@ -17,6 +17,7 @@ $Project "client"
 {
 	"game\client\client_tf.vpc"			[$TF]
 	"game\client\client_hl2mp.vpc"		[$HL2MP]
+	"game\client\client_cstrike.vpc"		[$CSTRIKE]
 }
 
 $Project "fgdlib"
@@ -52,8 +53,8 @@ $Project "server"
 {
 	"game\server\server_tf.vpc"			[$TF]
 	"game\server\server_hl2mp.vpc"		[$HL2MP]
+	"game\server\server_cstrike.vpc"		[$CSTRIKE]
 }
-
 $Project "launcher_main"
 {
 	"launcher_main\launcher_main_mod_hl2mp.vpc" [$HL2MP]

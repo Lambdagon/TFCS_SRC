@@ -29,7 +29,7 @@
 #ifdef CSTRIKE_DLL
 #include "cs_shareddefs.h"
 #include "nav_pathfind.h"
-#include "cs_nav_area.h"
+//#include "cs_nav_area.h"
 #endif
 
 #include "util_shared.h"
@@ -802,6 +802,7 @@ NavErrorType CNavArea::PostLoad( void )
 }
 
 
+#ifndef COMMUNITY_DLL
 //--------------------------------------------------------------------------------------------------------------
 /**
  * Compute travel distance along shortest path from startPos to goalPos. 
@@ -849,6 +850,7 @@ float NavAreaTravelDistance( const Vector &startPos, const Vector &goalPos, Cost
 		return distance;
 	}
 }
+#endif
 
 //--------------------------------------------------------------------------------------------------------------
 /**
@@ -1043,7 +1045,7 @@ static void WarnIfMeshNeedsAnalysis( int version )
 			return;
 		}
 	}
-#ifdef CSTRIKE_DLL
+/*#ifdef CSTRIKE_DLL
 	else
 	{
 		bool hasApproachAreas = false;
@@ -1071,7 +1073,7 @@ static void WarnIfMeshNeedsAnalysis( int version )
 			Warning( "The nav mesh needs a full nav_analyze\n" );
 		}
 	}
-#endif
+#endif*/
 }
 
 /**

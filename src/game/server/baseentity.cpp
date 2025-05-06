@@ -6744,7 +6744,7 @@ void CBaseEntity::SetLocalOrigin( const Vector& origin )
 #endif
 		
 		InvalidatePhysicsRecursive( POSITION_CHANGED );
-		m_vecOrigin.SetDirect( origin );
+		m_vecOrigin = origin;
 		SetSimulationTime( gpGlobals->curtime );
 	}
 }
@@ -6773,7 +6773,7 @@ void CBaseEntity::SetLocalAngles( const QAngle& angles )
 	if (m_angRotation != angles)
 	{
 		InvalidatePhysicsRecursive( ANGLES_CHANGED );
-		m_angRotation.SetDirect( angles );
+		m_angRotation = angles;
 		SetSimulationTime( gpGlobals->curtime );
 	}
 }
@@ -6799,8 +6799,8 @@ void CBaseEntity::SetLocalVelocity( const Vector &inVecVelocity )
 
 	if (m_vecVelocity != vecVelocity)
 	{
-		InvalidatePhysicsRecursive( VELOCITY_CHANGED );
-		m_vecVelocity.SetDirect( vecVelocity );
+		InvalidatePhysicsRecursive(VELOCITY_CHANGED);
+		m_vecVelocity = vecVelocity;
 	}
 }
 
