@@ -73,7 +73,7 @@ const float CycleLatchInterval = 0.2f;
 ConVar cs_ShowStateTransitions( "cs_ShowStateTransitions", "-2", FCVAR_CHEAT, "cs_ShowStateTransitions <ent index or -1 for all>. Show player state transitions." );
 ConVar sv_max_usercmd_future_ticks( "sv_max_usercmd_future_ticks", "8", 0, "Prevents clients from running usercmds too far in the future. Prevents speed hacks." );
 
-ConVar bot_mimic( "bot_mimic", "0", FCVAR_CHEAT );
+
 ConVar bot_freeze( "bot_freeze", "0", FCVAR_CHEAT );
 ConVar bot_crouch( "bot_crouch", "0", FCVAR_CHEAT );
 ConVar bot_mimic_yaw_offset( "bot_mimic_yaw_offset", "180", FCVAR_CHEAT );

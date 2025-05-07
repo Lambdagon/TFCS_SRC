@@ -1909,7 +1909,7 @@ bool CCSBot::ComputePath( const Vector &goal, RouteType route )
 	{
 		// we can't reach our last known area - find nearest area to us
 		PrintIfWatched( "Last known area is above my head - resetting to nearest area.\n" );
-		m_lastKnownArea = TheNavMesh->GetNearestNavArea( GetAbsOrigin(), false, 500.0f, true );
+		m_lastKnownArea == TheNavMesh->GetNearestNavArea( GetAbsOrigin(), false, 500.0f, true );
 		if (m_lastKnownArea == NULL)
 		{
 			return false;

@@ -32,7 +32,6 @@ C_NextBotCombatCharacter::C_NextBotCombatCharacter()
 	m_bForceShadowType = false;
 
 	TheClientNextBots().Register( this );
-	UseClientSideAnimation();
 }
 
 

@@ -15,7 +15,7 @@ $Configuration
 	{
 		$AdditionalIncludeDirectories		"$BASE;.\cstrike\vgui,.\cstrike\buy_presets,.\cstrike,$SRCDIR\game\shared\cstrike,$SRCDIR\game\gameui2"
 		$AdditionalIncludeDirectories		"$BASE;.\community,$SRCDIR\game\shared\community"
-		$PreprocessorDefinitions			"$BASE;CSTRIKE_DLL;GAMEUI2;COMMUNITY_CLIENT_DLL;GLOWS_ENABLE"
+		$PreprocessorDefinitions			"$BASE;CSTRIKE_DLL;GAMEUI2;COMMUNITY_CLIENT_DLL;GLOWS_ENABLE;NEXT_BOT"
 	}
 }
 
@@ -188,6 +188,11 @@ $Project "Client"
 				$File	"cstrike\vgui_c4panel.cpp"
 				$File	"cstrike\vgui_viewc4panel.cpp"
 			}
+		}
+		$Folder	"NextBot"
+		{
+			$File	"NextBot\C_NextBot.cpp"
+			$File	"NextBot\C_NextBot.h"
 		}
 
 		$Folder	"game_controls"

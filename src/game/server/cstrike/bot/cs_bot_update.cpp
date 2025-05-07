@@ -313,7 +313,7 @@ void CCSBot::Update( void )
 	// where are we
 	if (!m_currentArea || !m_currentArea->Contains( myOrigin ))
 	{
-		m_currentArea = TheNavMesh->GetNavArea( myOrigin );
+		m_currentArea == TheNavMesh->GetNavArea( myOrigin );
 	}
 
 	// track the last known area we were in

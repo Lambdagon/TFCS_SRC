@@ -14,8 +14,6 @@
 #include "gamerules.h"
 #include "datacache/imdlcache.h"
 
-#include "tier1/fmtstr.h"
-
 #include "tier2/tier2.h"
 #include "tier2/p4helpers.h"
 #include "tier2/fileutils.h"
@@ -29,10 +27,8 @@
 #ifdef CSTRIKE_DLL
 #include "cs_shareddefs.h"
 #include "nav_pathfind.h"
-//#include "cs_nav_area.h"
+#include "cs_nav_area.h"
 #endif
-
-#include "util_shared.h"
 
 // NOTE: This has to be the last file included!
 #include "tier0/memdbgon.h"
@@ -802,7 +798,6 @@ NavErrorType CNavArea::PostLoad( void )
 }
 
 
-#ifndef COMMUNITY_DLL
 //--------------------------------------------------------------------------------------------------------------
 /**
  * Compute travel distance along shortest path from startPos to goalPos. 
@@ -850,7 +845,6 @@ float NavAreaTravelDistance( const Vector &startPos, const Vector &goalPos, Cost
 		return distance;
 	}
 }
-#endif
 
 //--------------------------------------------------------------------------------------------------------------
 /**
@@ -1045,7 +1039,7 @@ static void WarnIfMeshNeedsAnalysis( int version )
 			return;
 		}
 	}
-/*#ifdef CSTRIKE_DLL
+#ifdef CSTRIKE_DLL
 	else
 	{
 		bool hasApproachAreas = false;
@@ -1073,7 +1067,7 @@ static void WarnIfMeshNeedsAnalysis( int version )
 			Warning( "The nav mesh needs a full nav_analyze\n" );
 		}
 	}
-#endif*/
+#endif
 }
 
 /**
@@ -1190,7 +1184,7 @@ bool CNavMesh::Save( void ) const
 			ladder->Save( fileBuffer, NavCurrentVersion );
 		}
 	}
-
+	
 	//
 	// Store derived class mesh info
 	//
@@ -1205,17 +1199,7 @@ bool CNavMesh::Save( void ) const
 
 	if ( !filesystem->WriteFile( filename, "MOD", fileBuffer ) )
 	{
-		// XXX(JohnS): Nav bails out after analyze regardless of it failed to save work, meaning if your .nav is
-		//             read-only you're about to throw away everything.  This code is old and bad.  Just make a generous
-		//             effort to save a backup, since this is common with e.g. read-only p4 nav files.
-		CFmtStrN< MAX_PATH > sBackupFile( "%s.failedsave", filename ); // .bak voted too likely to conflict with user
-																	   // saved files
 		Warning( "Unable to save %d bytes to %s\n", fileBuffer.Size(), filename );
-
-		if ( filesystem->WriteFile( sBackupFile, "MOD", fileBuffer ) )
-		{
-			Warning( "NAV failed to save, saved backup copy to '%s'\n", sBackupFile.Get() );
-		}
 		return false;
 	}
 
@@ -1393,12 +1377,9 @@ const CUtlVector< Place > *CNavMesh::GetPlacesFromNavFile( bool *hasUnnamedPlace
  */
 NavErrorType CNavMesh::GetNavDataFromFile( CUtlBuffer &outBuffer, bool *pNavDataFromBSP )
 {
-	char maptmp[256];
-	const char *pszMapName = GetCleanMapName( STRING( gpGlobals->mapname ), maptmp );
-
 	// nav filename is derived from map filename
 	char filename[MAX_PATH] = { 0 };
-	Q_snprintf( filename, sizeof( filename ), FORMAT_NAVFILE, pszMapName );
+	Q_snprintf( filename, sizeof( filename ), FORMAT_NAVFILE, STRING( gpGlobals->mapname ) );
 
 	if ( !filesystem->ReadFile( filename, "MOD", outBuffer ) )	// this ignores .nav files embedded in the .bsp ...
 	{

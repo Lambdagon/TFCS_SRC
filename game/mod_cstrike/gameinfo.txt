@@ -5,7 +5,7 @@
 	
 	GameData		"community.fgd"
 	InstancePath 	"maps/instances/"
-
+	AdditionalLocalization	"cstrike"
 	nomodels 		1 
 	nohimodel 		1	
 	nocrosshair 	0 
