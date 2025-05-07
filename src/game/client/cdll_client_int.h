@@ -60,6 +60,14 @@ class IEngineClientReplay;
 class IReplayScreenshotManager;
 class CSteamID;
 
+// Forward declaration of IGameUI2
+class IGameUI2;
+
+#if defined(GAMEUI2)
+extern IGameUI2* GameUI2;
+#endif // GAMEUI2
+
+
 //=============================================================================
 // HPE_BEGIN
 // [dwenger] Necessary for stats display

@@ -17,7 +17,7 @@ $Group "gamedlls"
 $Group "game"
 {
 	"client"
-	"launcher_main"
+	"gameui2"
 	"mathlib"
 	"raytrace"
 	"server"

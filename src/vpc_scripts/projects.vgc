@@ -19,6 +19,10 @@ $Project "client"
 	"game\client\client_hl2mp.vpc"		[$HL2MP]
 	"game\client\client_cstrike.vpc"		[$CSTRIKE]
 }
+$Project "gameui2"
+{
+	"game\gameui2\gameui2_base.vpc"		[$CSTRIKE]
+}
 
 $Project "fgdlib"
 {

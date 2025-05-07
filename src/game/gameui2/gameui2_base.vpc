@@ -4,7 +4,7 @@
 //	Project Script
 //-----------------------------------------------------------------------------
 
-$Macro GAMENAME 	"community"
+$Macro GAMENAME 	"mod_cstrike"
 $Macro OUTBINNAME	"gameui2"
 $Macro OUTBINDIR	"$SRCDIR\..\game\$GAMENAME\bin"
 $Macro SRCDIR		"..\.."
@@ -151,7 +151,7 @@ $Project "GameUI2"
 		$Lib		tier3
 		$Lib		vgui_controls
 		$Lib		vtf
-		$ImpLib		steam_api
+		$ImpLib		steam_api64
 		
 		$Lib $LIBCOMMON/libcrypto [$POSIX]
 

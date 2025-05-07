@@ -683,9 +683,13 @@ void CBaseEntity::ImpactTrace( trace_t *pTrace, int iDamageType, const char *pCu
 	data.m_nSurfaceProp = pTrace->surface.surfaceProps;
 	data.m_nDamageType = iDamageType;
 	data.m_nHitBox = pTrace->hitbox;
-#ifdef CLIENT_DLL
-	data.m_hEntity = ClientEntityList().EntIndexToHandle( pEntity->entindex() );
-#else
+//#ifdef CLIENT_DLL
+//	//data.m_hEntity = ClientEntityList().EntIndexToHandle( pEntity->entindex() );
+//#else
+//	data.m_nEntIndex = pEntity->entindex();
+//#endif
+
+#ifdef GAME_DLL
 	data.m_nEntIndex = pEntity->entindex();
 #endif
 
@@ -759,8 +763,14 @@ int CBaseEntity::RegisterThinkContext( const char *szContext )
 //-----------------------------------------------------------------------------
 BASEPTR	CBaseEntity::ThinkSet( BASEPTR func, float thinkTime, const char *szContext )
 {
-#if !defined( CLIENT_DLL ) && defined( _DEBUG )
-	COMPILE_TIME_ASSERT( sizeof(func) == ENTITYFUNCPTR_SIZE );
+#if !defined( CLIENT_DLL )
+#ifdef _DEBUG
+#ifdef GNUC
+	COMPILE_TIME_ASSERT( sizeof(func) == 8 );
+#else
+	COMPILE_TIME_ASSERT( sizeof(func) == 4 );
+#endif
+#endif
 #endif
 
 	// Old system?
