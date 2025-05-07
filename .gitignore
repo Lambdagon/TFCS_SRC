@@ -502,3 +502,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+game/mod_cstrike/cfg/settings.scr
+/game/mod_cstrike/download/user_custom
+/game/mod_cstrike/downloadlists
+game/mod_cstrike/ServerConfig.vdf
+game/mod_cstrike/textwindow_temp.html
